@@ -32,6 +32,7 @@ include("application/views/main_menu.php");?>
 
 
 
+
         <div class="row">
             <div class="product-big-title-area">
                 <div class="container">
@@ -40,6 +41,22 @@ include("application/views/main_menu.php");?>
                             <div class="my-big-title text-right">
                                 <h2>Shopping Cart</h2>
                             </div>
+
+    <div class="container " >
+        <div class="row">
+            <!-- Search box Start -->
+            <div class="col-md-12">
+                    <h2 class="sidebar-title">Search Hotel</h2>
+
+                    <form>
+                        <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a City <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">United States</a></li>
+                                <li><a href="#">Canada</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-star"></span> Other</a></li>
+                            </ul>
+
                         </div>
                         <div class="col-xs-6 text-left">
                                     <form style="margin-bottom: 10px; margin-top: 10px">
@@ -117,19 +134,7 @@ include("application/views/main_menu.php");?>
                        <div class="price">£480</div>
 					   </div>
 					    </div>
-					   <span class="rating">
-				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-				        <label for="rating-input-1-5" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-				        <label for="rating-input-1-4" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-				        <label for="rating-input-1-3" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-				        <label for="rating-input-1-2" class="rating-star"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
-		        	  (45)
-		    	      </span>
+					   
 						 <ul class="list">
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
@@ -159,19 +164,7 @@ include("application/views/main_menu.php");?>
                        <div class="price">£480</div>
 					   </div>
 					    </div>
-					   <span class="rating">
-				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-				        <label for="rating-input-1-5" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-				        <label for="rating-input-1-4" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-				        <label for="rating-input-1-3" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-				        <label for="rating-input-1-2" class="rating-star"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
-		        	  (45)
-		    	      </span>
+					   
 						 <ul class="list">
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
@@ -207,19 +200,7 @@ include("application/views/main_menu.php");?>
                        <div class="price">£480</div>
 					   </div>
 					    </div>
-					   <span class="rating">
-				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-				        <label for="rating-input-1-5" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-				        <label for="rating-input-1-4" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-				        <label for="rating-input-1-3" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-				        <label for="rating-input-1-2" class="rating-star"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
-		        	  (45)
-		    	      </span>
+					   
 						 <ul class="list">
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
@@ -249,19 +230,7 @@ include("application/views/main_menu.php");?>
                        <div class="price">£480</div>
 					   </div>
 					    </div>
-					   <span class="rating">
-				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-				        <label for="rating-input-1-5" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-				        <label for="rating-input-1-4" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-				        <label for="rating-input-1-3" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-				        <label for="rating-input-1-2" class="rating-star"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
-		        	  (45)
-		    	      </span>
+					   
 						 <ul class="list">
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
@@ -291,19 +260,7 @@ include("application/views/main_menu.php");?>
                        <div class="price">£480</div>
 					   </div>
 					    </div>
-					   <span class="rating">
-				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-				        <label for="rating-input-1-5" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-				        <label for="rating-input-1-4" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-				        <label for="rating-input-1-3" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-				        <label for="rating-input-1-2" class="rating-star"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
-		        	  (45)
-		    	      </span>
+					   
 						 <ul class="list">
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
