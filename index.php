@@ -33,9 +33,10 @@ include("application/views/main_menu.php");?>
 
     <div class="container ">
         <div class="row">
-            <div class="col-md-4">
+            <!-- Search box Start -->
+            <div class="col-md-12">
                     <h2 class="sidebar-title">Search Hotel</h2>
-                    <!-- Search box Start -->
+
                     <form>
                         <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a Country <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -49,8 +50,12 @@ include("application/views/main_menu.php");?>
                             <button type="button" id="btnSearch" class="btn btn-primary">Search</button>
                         </div>
                     </form>
-                    <!-- Search box End -->
                 </div>
+            <!-- Search box End -->
+
+
+
+
             </div>
         </div>
 	
