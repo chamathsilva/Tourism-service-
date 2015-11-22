@@ -29,60 +29,32 @@ include("application/views/main_menu.php");?>
 
 <?php include("application/views/slider.php"); ?>
 
-
-
-
-
-        <div class="row">
-            <div class="product-big-title-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-6 text-left">
-                            <div class="my-big-title text-right">
-                                <h2>Shopping Cart</h2>
-                            </div>
-
-    <div class="container " >
-        <div class="row">
-            <!-- Search box Start -->
-            <div class="col-md-12">
-                    <h2 class="sidebar-title">Search Hotel</h2>
-
-                    <form>
-                        <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a City <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">United States</a></li>
-                                <li><a href="#">Canada</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-star"></span> Other</a></li>
-                            </ul>
-
-                        </div>
-                        <div class="col-xs-6 text-left">
-                                    <form style="margin-bottom: 10px; margin-top: 10px">
-                                        <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a Country <span class="caret"></span></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">United Statesugugughuhuuhuhu</a></li>
-                                                <li><a href="#">Canada</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#"><span class="glyphicon glyphicon-star"></span> Other</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-group">
-                                            <button type="button" id="btnSearch" class="btn btn-primary">Search</button>
-                                        </div>
-                                    </form>
-                                </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- End Page title area -->
-
-            <!-- Search box Start -->
-
-            <!-- Search box End -->
+<!-- Search box Start -->
+<div class="product-big-title-area" style="margin-bottom: 50px; margin-top: 50px">
+		<div class="row">
+			<div class="col-xs-6 text-right">
+				<div class="my-big-title text-right" style="margin-top: 5px">
+					<h2>Search Hotel</h2>
+				</div>
+			</div>
+			<div class="col-xs-6 text-left">
+				<form style="margin-bottom: 10px; margin-top: 10px">
+					<div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a Country <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">United Statesugugughuhuuhuhu</a></li>
+							<li><a href="#">Canada</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><span class="glyphicon glyphicon-star"></span> Other</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" id="btnSearch" class="btn btn-primary">Search</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<!-- Search box End -->
 
 	<!--####################################################################################################################################-->
 	<div class="main">

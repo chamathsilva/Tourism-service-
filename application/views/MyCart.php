@@ -28,8 +28,6 @@ require("../config/config.php");
 <body>
 <?php include("top_header.php");
 include("main_menu.php");
-
-echo base_url."application/views/mainLogin.php";
 ?>
 
 
@@ -49,13 +47,11 @@ echo base_url."application/views/mainLogin.php";
 </div> <!-- End Page title area -->
 
 
-<div class="single-product-area">
+<div class="single-product-area ">
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
-
-
-            <div class="col-md-8 ">
+            <div class="col-md-8 col-md-offset-2">
                 <div class="product-content-right">
                     <div class="woocommerce">
                         <form method="post" action="#">
@@ -178,7 +174,7 @@ echo base_url."application/views/mainLogin.php";
         </div>
     </div>
 </div>
-</div>
+
 
 
 
