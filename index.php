@@ -31,34 +31,42 @@ include("application/views/main_menu.php");?>
 
 
 
-    <div class="container ">
-        <div class="row">
-            <!-- Search box Start -->
-            <div class="col-md-12">
-                    <h2 class="sidebar-title">Search Hotel</h2>
 
-                    <form>
-                        <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a Country <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">United States</a></li>
-                                <li><a href="#">Canada</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-star"></span> Other</a></li>
-                            </ul>
+        <div class="row">
+            <div class="product-big-title-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 text-left">
+                            <div class="my-big-title text-right">
+                                <h2>Shopping Cart</h2>
+                            </div>
                         </div>
-                        <div class="btn-group">
-                            <button type="button" id="btnSearch" class="btn btn-primary">Search</button>
+                        <div class="col-xs-6 text-left">
+                                    <form style="margin-bottom: 10px; margin-top: 10px">
+                                        <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a Country <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">United Statesugugughuhuuhuhu</a></li>
+                                                <li><a href="#">Canada</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-star"></span> Other</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button type="button" id="btnSearch" class="btn btn-primary">Search</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+
                         </div>
-                    </form>
+                    </div>
                 </div>
+            </div> <!-- End Page title area -->
+
+            <!-- Search box Start -->
+
             <!-- Search box End -->
 
-
-
-
-            </div>
-        </div>
-	
 	<!--####################################################################################################################################-->
 	<div class="main">
                 <div class="wrap">   
@@ -318,42 +326,6 @@ include("application/views/main_menu.php");?>
         </div>
 
 
-
-
-
-<!-- promo area >
-<div class="promo-area">
-    <div class="zigzag-bottom"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-3">
-                <div class="single-promo promo1">
-                    <i class="fa fa-refresh"></i>
-                    <p>30 Days return</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="single-promo promo2">
-                    <i class="fa fa-truck"></i>
-                    <p>Free shipping</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="single-promo promo3">
-                    <i class="fa fa-lock"></i>
-                    <p>Secure payments</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="single-promo promo4">
-                    <i class="fa fa-gift"></i>
-                    <p>New products</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- promo area-end -->
 <?php include("application/views/footer.php") ?>
 </body>
 <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
