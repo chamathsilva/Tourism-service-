@@ -42,12 +42,12 @@ require("../config/config.php");
 
 		<div class ="row">
 
-				<form class="" method="POST" action="">
+				<form id = "register-form" class="" method="POST" action="">
 					<div class=" col-md-6 col-md-offset-3">
 
 						<div class = "form-group">
 							<label for="firstname">User Name</label>
-							<input type = "text" name = "firstname" class="form-control" value="" placeholder = "UserName" />
+							<input type = "text" name = "username" class="form-control" value="" placeholder = "UserName" />
 						</div>
 
 						<div class = "form-group">
@@ -66,13 +66,13 @@ require("../config/config.php");
 						<div class = "form-group">
 							<label for="password">Password</label>
 
-							<input type = "Password" name = "password1" class="form-control"  placeholder = "Password" />
+							<input type = "Password"  id="password" name = "password" class="form-control"  placeholder = "Password" />
 						</div>
 
 						<div class = "form-group">
 							<label for="confirmpassword">ConfirmPassword</label>
 
-							<input type = "Password" name = "password2" class="form-control"  placeholder = "ConfirmPassword" />
+							<input type = "Password" id="password2" name = "password2" class="form-control"  placeholder = "ConfirmPassword" />
 						</div>
 
 						<div class = "form-group">
@@ -87,13 +87,14 @@ require("../config/config.php");
 
 						<div class = "form-group">
 							<label for="nic">ContactNo</label>
-							<input type = "text" name = "nic" class="form-control" value="" placeholder = "Contact No" />
+							<input type = "text" name = "contact" class="form-control" value="" placeholder = "Contact No" />
 						</div>
 				</div>
 				<div class=" col-md-6 col-md-offset-3 text-center" >
 					<button type="submit" name = "submit" class="btn btn-default">Submit</button>
-					<button type="submit" name = "submit" class="btn btn-default">Reset</button>
+					<button class="btn btn-danger" type="reset">Reset</button>
 					<button type="submit" name = "singout" value = "singout" class="btn btn-default" onClick="window.open('')">Back To Login</button>
+
 					</br></br>
 				</div>
 				</form>
@@ -106,6 +107,8 @@ require("../config/config.php");
 <script type="text/javascript" src="../../assets/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../../assets/js/tourism_service.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../../assets/js/validation.js"></script>
 
 
 

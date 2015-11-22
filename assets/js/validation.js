@@ -41,42 +41,48 @@ $(function(){
 
     $.validator.addMethod("integer", function(value, element) {
         return this.optional(element) || /^-?\d+$/.test(value);
-    }, "A positive or negative non-decimal number please");
+    }, "A Valid phone number please");
 
     $("#register-form").validate({
         rules:{
-            E_mail:{
+            email:{
                 required: true,
                 email: true
             },
-            Password: {
+            password: {
                 required: true,
                 strongPassword: true
 
             } ,
-            password_again: {
+            password2: {
                 required: true,
-                equalTo: "#Password"
+                equalTo: "#password"
             },
-            First_Name:{
-                required: true,
-                nowhitespace: true,
-                lettersonly: true
-            },
-
-            Last_Name:{
+            firstname:{
                 required: true,
                 nowhitespace: true,
                 lettersonly: true
             },
 
-            User_Name:{
+            lastname:{
+                required: true,
+                nowhitespace: true,
+                lettersonly: true
+            },
+
+            username:{
                 required: true,
                 nowhitespace: true
 
             },
-            terms:{
-                required:true
+            nic:{
+                required:true,
+                nowhitespace:true
+            },
+            contact:{
+                required:true,
+                nowhitespace:true,
+                integer: true
             }
 
         },
@@ -90,6 +96,20 @@ $(function(){
             },
             terms:{
                 required:"You must agree to the terms and conditions"
+            }
+
+
+        }
+    });
+
+    $("#login-form").validate({
+        rules:{
+            User_Name:{
+                required: true
+
+            },
+            Password: {
+                required: true
             }
 
 
