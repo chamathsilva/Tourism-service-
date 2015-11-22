@@ -17,10 +17,11 @@ require("../models/Db.class.php");
     <link rel="stylesheet" href="../../assets/css/tourism_service.css"/>
 
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
+
+
 
 <div class="form-style" id="contact_form">
     <div class="form-style-heading">Please Contact Us</div>
