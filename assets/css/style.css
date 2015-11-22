@@ -695,6 +695,14 @@ ol.slide-indicators li.active {
 	padding: 50px 0;color: #fff;
 }
 
+.my-big-title h2 {
+	font-family: raleway;
+	font-size: 30px;
+	font-weight: 200;
+	margin: 0;
+	padding: 5px 0;color: #fff;
+}
+
 .single-product-area .zigzag-bottom {background-color: #f4f4f4}
 
 .single-product-area {
