@@ -26,19 +26,23 @@ require("../config/config.php");
     <link rel="stylesheet" href="../../assets/css/font-awesome.min.css"
 </head>
 
+<body>
 <?php include("top_header.php");
 include("main_menu.php");
 ?>
 
 <div class="product-big-title-area " style="margin-bottom: 50px;">
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <div class="my-big-title ">
-                <h2>Available Rooms</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="my-big-title ">
+                    <h2>Available Rooms</h2>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <div class="main">
