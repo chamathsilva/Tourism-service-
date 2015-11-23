@@ -28,9 +28,10 @@ require("../config/config.php");
 <body>
 	<?php include("top_header.php");
 	include("main_menu.php");
-
-echo base_url."application/views/mainLogin.php";
 	?>
+
+
+
 <div class="container col-md-7 col-md-offset-2">
 	<div class="col-md-8 col-md-offset-2">	
 		<div class="panel panel-primary" style="margin-top: 10px;">
@@ -41,16 +42,21 @@ echo base_url."application/views/mainLogin.php";
 	</div>
 	<div class = "row">
 		<div class="panel panel-default col-md-6 col-md-offset-3 text-center">
+
 		</br>
-			<form class="panel panel-primary"  action = "" method = "POST" >
+			<form class=""  action = "" method = "POST" >
+
+
 				<div class = "form-group">
 					<label for="username">UserName Or Email Address</label>
 					<input type = "text" name = "username" class="form-control" />
 				</div>
+
 				<div class = "form-group">
 					<label for="password">Password</label>
 					<input type = "password" name = "password" class="form-control" />
 				</div>
+
 				<button type="submit" name = "submit" class="btn btn-info">Login</button>
 				<button type="submit" name = "newuser" class="btn btn-info">New User</button>
 				<button type="submit" name = "fgtPassword" class="btn btn-info">Fogot Pass</button>
@@ -60,9 +66,8 @@ echo base_url."application/views/mainLogin.php";
 		</div>
 	</div>
 </div>
-
-
-</body>
+	<div class="clear" style=" margin-bottom: 25%"></div>
+<?php include("footer.php") ?>
 </body>
 <script type="text/javascript" src="../../assets/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
