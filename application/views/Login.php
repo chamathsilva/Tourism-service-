@@ -40,8 +40,9 @@ echo base_url."application/views/mainLogin.php";
 		</div>
 	</div>
 	<div class = "row">
-		<div class="panel panel-default col-md-6 col-md-offset-3">	
-			<form class="panel-panel-primary"  action = "" method = "POST" >
+		<div class="panel panel-default col-md-6 col-md-offset-3 text-center">
+		</br>
+			<form class="panel panel-primary"  action = "" method = "POST" >
 				<div class = "form-group">
 					<label for="username">UserName Or Email Address</label>
 					<input type = "text" name = "username" class="form-control" />
@@ -53,6 +54,7 @@ echo base_url."application/views/mainLogin.php";
 				<button type="submit" name = "submit" class="btn btn-info">Login</button>
 				<button type="submit" name = "newuser" class="btn btn-info">New User</button>
 				<button type="submit" name = "fgtPassword" class="btn btn-info">Fogot Pass</button>
+				</br></br>
 			</form>
 			</br>
 		</div>
