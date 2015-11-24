@@ -20,7 +20,14 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM hotel WHERE city = :City ", array('City' => $city ) );
 		return $result_set;
 	}
+	/////////////////////////Get All Hotel Details ////////////////////////////////////////////////////////////////
+	function get_All_hotel_details(){
+		global $db;
+		$result_set = $db->query("SELECT * FROM hotel", array() );
+		return $result_set;
+	}
 	//d(get_hotel_details_according_to_city("colombo"),"Test");
+	d(get_All_hotel_details(),"Test");
 	
 	///////////////////////// Get Room Detals According to hotel_ID /////////////////////////////////////////////
 	function get_room_details_according_to_hotelID($hotel_id){
@@ -56,8 +63,20 @@ require("../config/config.php");
 	function add_booking_details($user_ID,$hotel_ID,$room_ID,$bookingDate,$checkInDate,$checkOutDate){
 		global $db;
 		$db->query("INSERT INTO  bookingrooms(userID,hotelID,roomID,bookingDate,checkInDate,checkOutDate) VALUES(:user_ID,:hotel_ID,:room_ID,:bookingDate,:checkInDate,:checkOutDate)",array("user_ID"=>$user_ID,"hotel_ID"=>$hotel_ID,"room_ID"=>$room_ID,"bookingDate"=>$bookingDate,"checkInDate"=>$checkInDate,"checkOutDate"=>$checkOutDate));
+		$db->query("DELETE FROM hotelroom WHERE hotelID = :hid ",array("hid"=>$hotel_ID));
 	}
 	
+	/////////////////////////Insert Cart Details /////////////////////////////////////////////////////////////////////////////////
+	function add_to_cart($user_id,$hotel_id){
+		global $db;
+		$db->query("INSERT INTO shopping_cart(hotel_id,room_id) VALUES(:hid,:rid)",array("hid"=>$user_id,"rid"=>$hotel_id));
+	} 
+	///////////////////////////Insert Promotion Details //////////////////////////////////////////////////////////////////////////
+	function add_Promotion($hotel_name,$start_date,$end_date,$description){
+		global $db;
+		$db->query("INSERT INTO promotion(hotel_name,start_date,end_date,description) VALUES(:hname,:s_date,:e_date,:des)",array("hname"=>$hotel_name,"s_date"=>$start_date,"e_date"=>$end_date,"des"=>$description));
+	} 
+	//add_Promotion("hhhhhh",2001/1/1,2001/1/1,"gggg");
 	
 	//add_registered_user_details("iuioiu","yry","jtuiokjb","uuykol","uilul","lulu","99900",0);
 	//add_hotel_details(1,"Bbayu","paka","colombo","hjd","gfjg","Hotel","fuck me");
@@ -81,7 +100,7 @@ require("../config/config.php");
 		global $db;
 		$db->query("UPDATE hotelroom SET status = 1 WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
 	}
-	change_booking_room_status(1,1);
+	//change_booking_room_status(1,1);
 	
 	//########################################################################################################################################################//
 	
@@ -90,9 +109,11 @@ require("../config/config.php");
 	
 	function Delete_hotel_with_all_rooms($user_ID,$hotel_ID){
 		global $db;
-		$db->query("DELETE hotel WHERE userID=:uid,hotelID = :hid ",array("uid"=>$user_ID,"hid"=>$hotel_ID));
-		$db->query("DELETE hotelroom WHERE hotelID = :hid ",array("hid"=>$hotel_ID));
+		$db->query("DELETE FROM hotel WHERE userID=:uid and hotelID = :hid ",array("uid"=>$user_ID,"hid"=>$hotel_ID));
+		$db->query("DELETE FROM hotelroom WHERE hotelID = :hid ",array("hid"=>$hotel_ID));
 	}
+	//Delete_hotel_with_all_rooms(1,1);
+	
 	
 ?>
 
