@@ -41,9 +41,9 @@ require("../config/config.php");
 		</div>
 	</div>
 	<div class = "row">
-		<div class="panel panel-default col-md-6 col-md-offset-3 text-center">
+		<div class="panel panel-primary col-md-6 col-md-offset-3 text-center">
 
-		</br>
+			</br>
 			<form class=""  action = "" method = "POST" >
 
 
