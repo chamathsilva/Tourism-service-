@@ -724,16 +724,18 @@ ol.slide-indicators li.active {
 }
 input[type="text"], input[type="password"], input[type="email"], textarea {
 	border: 1px solid #ddd;
-	padding: 10px;
 }
 input[type="submit"], button[type=submit] {
 	background: none repeat scroll 0 0 #5a88ca;
 	border: medium none;
 	color: #fff;
-	padding: 11px 20px;
+	padding: 8px 8px;
 	text-transform: uppercase;
 }
-input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
+input[type="submit"]:hover, button[type=submit]:hover {background-color: #222;
+	color: white;
+
+}
 .single-sidebar input[type="text"] {
 	margin-bottom: 10px;
 	width: 100%;

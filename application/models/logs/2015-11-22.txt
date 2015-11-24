@@ -1,0 +1,58 @@
+Time : 20:46:06
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'lu' for key 'NIC_UNIQUE'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,identity) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:44:27
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'kyukl' for key 'email_UNIQUE'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,identity) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:39:45
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userPrivilage' in 'field list'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,userPrivilage) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:37:17
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'userPrivilage'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,userPrivilage) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:36:38
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'userPrivilage'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,userPrivilage) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:35:44
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'userPrivilage'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,userPrivilage) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:35:06
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'userPrivilage'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,userPrivilage) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:33:05
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'userPrivilage'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,userPrivilage) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:31:24
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'userPrivilage'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,userPrivilage) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)
+
+Time : 20:25:03
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'userPrivilage'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO)
+
+Time : 20:13:16
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '58698799' for key 'contactNo_UNIQUE'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO)
+
+Time : 20:12:50
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ydgugy' for key 'NIC_UNIQUE'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO)
+
+Time : 20:12:08
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'gfD' for key 'email_UNIQUE'
+Raw SQL : INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO)
+
+Time : 14:33:28
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'prodb.persons' doesn't exist
+Raw SQL : SELECT * FROM Persons WHERE firstname = :firstname AND age = :age
+
+Time : 14:32:12
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)

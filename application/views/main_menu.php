@@ -15,7 +15,7 @@
                     <li class="#active"><a href="<?php echo base_url;?>">Home</a></li>
                     <li><a href="<?php echo base_url."application/views/rooms.php";?>">Rooms</a></li>
                     <li><a href="<?php echo base_url."application/views/promotions.php";?>">Promotions</a></li>
-                    <li><a href="<?php echo base_url."application/views/contact.php";?>">Contact</a></li>
+                    <li><a href="<?php echo base_url."test/multi/index.html";?>">Contact</a></li>
 
                 </ul>
             </div>

@@ -31,6 +31,7 @@ include("application/views/main_menu.php");?>
 
 <!-- Search box Start -->
 <div class="product-big-title-area" style="margin-bottom: 50px; margin-top: 50px">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-6 text-right">
 				<div class="my-big-title text-right" style="margin-top: 5px">
@@ -54,6 +55,7 @@ include("application/views/main_menu.php");?>
 			</div>
 		</div>
 	</div>
+</div>
 <!-- Search box End -->
 
 	<!--####################################################################################################################################-->

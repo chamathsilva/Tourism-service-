@@ -13,7 +13,7 @@ require("../config/config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Tourism Services | Home </title>
+    <title>Tourism Services | Room Informations </title>
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../assets/css/tourism_service.css"/>
     <link  rel="stylesheet" href="../../assets/css/style.css" type="text/css" media="all" />
@@ -33,8 +33,8 @@ require("../config/config.php");
 	<div class="col-md-6 col-md-offset-3 container panel panel-primary " style="margin-top:10px">
 	   <div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-primary" style="margin-top: 10px;">
-				<div class="panel-heading">
-					<div class = "panel-title"> New User Registration For Tourism Service</div>
+				<div class="panel-heading text-center">
+					<div class = "panel-title"> Fill Room Details</div>
 				</div>
 
 			</div>
@@ -44,59 +44,41 @@ require("../config/config.php");
 
 				<form id = "register-form" class="" method="POST" action="">
 					<div class=" col-md-6 col-md-offset-3">
-
+					
 						<div class = "form-group">
-							<label for="firstname">User Name</label>
-							<input type = "text" name = "username" class="form-control" value="" placeholder = "UserName" />
+							<label for="roomType">Room Type</label>
+							<div class = "panel panel-default">
+								<span>
+									<input type="radio" name="roomType" id="roomType" value="single"/> Single </label> <br/>
+									<input type="radio" name="roomType" id="roomType" value="double"/> Double </label> <br/>
+									<input type="radio" name="roomType" id="roomType" value="family"/> Family </label> 
+								</span>
+							</div>                            
 						</div>
 
 						<div class = "form-group">
-							<label for="firstname">First Name</label>
+							<label for="price">Price</label>
+							<input type = "text" name = "price" class="form-control" value="" placeholder = "RoomPrice" />
+						</div>
+						
+						<div class = "form-group">
+							<label for="roominfo">Room Description</label>
 
-							<input type = "text" name = "firstname" class="form-control" value="" placeholder = "FirstName" />
+							<textarea type = "textarea" rows="5" cols="40" id="Info" name = "roominfo" class="form-control"  placeholder = "Details About Your Room" /></textarea>
 						</div>
 
 						<div class = "form-group">
-							<label for="lastname">Last Name</label>
-
-							<input type = "text" name = "lastname" class="form-control" value="" placeholder = "LastName"/>
+							<label for="OwnerName">Room Image</label>
+							<input type = "file" name = "OwnerName"  value="" placeholder = "BusinessOwnerName" />
 						</div>
+					</div>
+					<div class=" col-md-6 col-md-offset-3 text-center" >
+						<button type="submit" name = "submit" class="btn btn-default">Submit</button>
+						<button class="btn btn-danger" type="reset">Reset</button>
+						
 
-
-						<div class = "form-group">
-							<label for="password">Password</label>
-
-							<input type = "Password"  id="password" name = "password" class="form-control"  placeholder = "Password" />
-						</div>
-
-						<div class = "form-group">
-							<label for="confirmpassword">ConfirmPassword</label>
-
-							<input type = "Password" id="password2" name = "password2" class="form-control"  placeholder = "ConfirmPassword" />
-						</div>
-
-						<div class = "form-group">
-							<label for="email">E-mail</label>
-							<input type = "text" name = "email" class="form-control" value="" placeholder = "email" />
-						</div>
-
-						<div class = "form-group">
-							<label for="nic">NIC</label>
-							<input type = "text" name = "nic" class="form-control" value="" placeholder = "NIC" />
-						</div>
-
-						<div class = "form-group">
-							<label for="nic">ContactNo</label>
-							<input type = "text" name = "contact" class="form-control" value="" placeholder = "Contact No" />
-						</div>
-				</div>
-				<div class=" col-md-6 col-md-offset-3 text-center" >
-					<button type="submit" name = "submit" class="btn btn-default">Submit</button>
-					<button class="btn btn-danger" type="reset">Reset</button>
-					<button type="submit" name = "singout" value = "singout" class="btn btn-default" onClick="window.open('')">Back To Login</button>
-
-					</br></br>
-				</div>
+						</br></br>
+					</div>
 				</form>
 			</div>
 		</div>

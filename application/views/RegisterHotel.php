@@ -13,7 +13,7 @@ require("../config/config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Tourism Services | Home </title>
+    <title>Tourism Services | RegisterHotel </title>
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../assets/css/tourism_service.css"/>
     <link  rel="stylesheet" href="../../assets/css/style.css" type="text/css" media="all" />
@@ -34,7 +34,7 @@ require("../config/config.php");
 	   <div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-primary" style="margin-top: 10px;">
 				<div class="panel-heading">
-					<div class = "panel-title"> New User Registration For Tourism Service</div>
+					<div class = "panel-title"> New Business Registration For Tourism Service</div>
 				</div>
 
 			</div>
@@ -46,49 +46,59 @@ require("../config/config.php");
 					<div class=" col-md-6 col-md-offset-3">
 
 						<div class = "form-group">
-							<label for="firstname">User Name</label>
-							<input type = "text" name = "username" class="form-control" value="" placeholder = "UserName" />
+							<label for="hotalName">Business Name</label>
+							<input type = "text" name = "hotalName" class="form-control" value="" placeholder = "BusinessName" />
 						</div>
 
 						<div class = "form-group">
-							<label for="firstname">First Name</label>
+							<label for="OwnerName">BusinessOwner Name</label>
 
-							<input type = "text" name = "firstname" class="form-control" value="" placeholder = "FirstName" />
+							<input type = "text" name = "OwnerName" class="form-control" value="" placeholder = "BusinessOwnerName" />
 						</div>
 
 						<div class = "form-group">
-							<label for="lastname">Last Name</label>
+							<label for="city">city</label>
 
-							<input type = "text" name = "lastname" class="form-control" value="" placeholder = "LastName"/>
+							<input type = "text" name = "city" class="form-control" value="" placeholder = "city"/>
 						</div>
 
 
 						<div class = "form-group">
-							<label for="password">Password</label>
+							<label for="address">Business Address</label>
 
-							<input type = "Password"  id="password" name = "password" class="form-control"  placeholder = "Password" />
+							<textarea type = "textarea" rows="5" cols="40" id="address" name = "address" class="form-control"  placeholder = "address" /></textarea>
 						</div>
-
 						<div class = "form-group">
-							<label for="confirmpassword">ConfirmPassword</label>
-
-							<input type = "Password" id="password2" name = "password2" class="form-control"  placeholder = "ConfirmPassword" />
+							<label for="nic">ImageName</label>
+							<input type = "text" name = "nic" class="form-control" value="" placeholder = "ImageName" />
+							
 						</div>
-
+						
 						<div class = "form-group">
-							<label for="email">E-mail</label>
-							<input type = "text" name = "email" class="form-control" value="" placeholder = "email" />
+							<label for="address">Business Info</label>
+
+							<textarea type = "textarea" rows="5" cols="40" id="Info" name = "Info" class="form-control"  placeholder = "Infomations About Your Business" /></textarea>
 						</div>
 
-						<div class = "form-group">
-							<label for="nic">NIC</label>
-							<input type = "text" name = "nic" class="form-control" value="" placeholder = "NIC" />
+						
+						
+                        <div class = "form-group">
+							<label for="hotelType">Business Type</label>
+							<div class = "panel panel-default">
+								<span>
+									<input type="radio" name="hotelType" id="hotelType" value="restaurent"/> Restaurent </label> <br/>
+									<input type="radio" name="hotelType" id="hotelType" value="hotel"/> Hotel </label> <br/>
+									<input type="radio" name="hotelType" id="hotelType" value="hall"/> Hall </label> 
+								</span>
+							</div>                            
 						</div>
-
+						
 						<div class = "form-group">
-							<label for="nic">ContactNo</label>
-							<input type = "text" name = "contact" class="form-control" value="" placeholder = "Contact No" />
+							<label for="noOfRooms">NoOfRooms </label>
+							<input type = "text" name = "noOfRooms" class="form-control" value="" placeholder = "noOfRooms" />
 						</div>
+                                                
+						
 				</div>
 				<div class=" col-md-6 col-md-offset-3 text-center" >
 					<button type="submit" name = "submit" class="btn btn-default">Submit</button>
