@@ -1,0 +1,15 @@
+Time : 12:37:08
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`pdb`.`hotel`, CONSTRAINT `foreignKey4User` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : UPDATE hotel SET userID = :userID,hotelName = :hotelName,hotelOwnerName = :hotelOwnerName,city = :city,hotelAddress = :hotelAddress,imagePath = :imagePath,Type = :Type,Description = :Description WHERE hotelID = :hotelID
+
+Time : 12:30:36
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : UPDATE hotel SET userID = :userID,hotelName = :hotelName,hotelOwnerName = :hotelOwnerName,city = :city,hotelAddress = :hotelAddress,imagePath = :imagePath,Type = :Type,Description = :Description WHERE hotelID = :hotelID
+
+Time : 10:38:05
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':Description)' at line 1
+Raw SQL : INSERT INTO hotel(userID,hotelName,hotelOwnerName,city,hotelAddress,imagePath,Type,Description) VALUES(:uid,:hname,:honame,:city,:haddress,:ipath,:type:Description)
+
+Time : 10:24:49
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':Description)' at line 1
+Raw SQL : INSERT INTO hotel(userID,hotelName,hotelOwnerName,city,hotelAddress,imagePath,Type,Description) VALUES(:uid,:hname,:honame,:city,:haddress,:ipath,:type:Description)
