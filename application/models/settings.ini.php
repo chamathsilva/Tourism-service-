@@ -2,5 +2,5 @@
 [SQL]
 host = localhost
 user = root
-password = 
-dbname = pdb
+password = root
+dbname = Tourism_Services

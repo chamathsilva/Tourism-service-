@@ -43,78 +43,11 @@ $(function(){
         return this.optional(element) || /^-?\d+$/.test(value);
     }, "A Valid phone number please");
 
-    $("#register-form").validate({
-        rules:{
-            email:{
-                required: true,
-                email: true
-            },
-            password: {
-                required: true,
-                strongPassword: true
-
-            } ,
-            password2: {
-                required: true,
-                equalTo: "#password"
-            },
-            firstname:{
-                required: true,
-                nowhitespace: true,
-                lettersonly: true
-            },
-
-            lastname:{
-                required: true,
-                nowhitespace: true,
-                lettersonly: true
-            },
-
-            username:{
-                required: true,
-                nowhitespace: true
-
-            },
-            nic:{
-                required:true,
-                nowhitespace:true
-            },
-            contact:{
-                required:true,
-                nowhitespace:true,
-                integer: true
-            }
-
-        },
-        messages: {
-            email: {
-                required: 'Please enter an email address.',
-                email:'Please enter a <em>valid</em> email address.'
-            },
-            password2: {
-                equalTo: "Please enter the same password again."
-            },
-            terms:{
-                required:"You must agree to the terms and conditions"
-            }
 
 
-        }
-    });
-
-    $("#login-form").validate({
-        rules:{
-            User_Name:{
-                required: true
-
-            },
-            Password: {
-                required: true
-            }
 
 
-        }
-    })
+
 
 });
 

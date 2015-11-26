@@ -242,3 +242,7 @@ body,html{
     color: #FF0000;
     border-left: 3px solid #FF0000;
 } 
+
+#promotion_div li {
+    padding-left: 10px;
+  }

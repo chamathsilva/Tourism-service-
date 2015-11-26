@@ -47,7 +47,7 @@ require("../models/Db.class.php");
             <textarea name="message" id="message" class="textarea-field" required="true"></textarea>
         </label>
         <label>
-            <span>&nbsp;</span><input type="submit" id="submit_btn" value="Submit" />
+            <span>&nbsp;</span><input  id="submit_btn" value="Submit" />
         </label>
     </div>
 </div>
