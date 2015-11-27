@@ -30,6 +30,7 @@ if(isset($_SESSION['username'])){
     <link rel="stylesheet" href="../../assets/css/font-awesome.min.css"
 </head>
 <body>
+<div class="size-wraper">
 	<?php include("top_header.php");
 	include("main_menu.php");
 	?>
@@ -147,8 +148,10 @@ if(isset($_SESSION['username'])){
 
 
 </div>
-	<div class="clear" style=" margin-bottom: 25%"></div>
+	<div class="clear"> </div>
+	</div>
 <?php include("footer.php") ?>
+
 </body>
 <script type="text/javascript" src="../../assets/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>

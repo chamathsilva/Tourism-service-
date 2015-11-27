@@ -24,6 +24,8 @@ require("application/config/config.php");
     <link rel="stylesheet" href="assets/css/font-awesome.min.css"
 </head>
 <body>
+
+<div class="size-wraper">
 <?php include("application/views/top_header.php") ;
 include("application/views/main_menu.php");?>
 
@@ -276,6 +278,7 @@ include("application/views/main_menu.php");?>
 
 
 <?php include("application/views/footer.php") ?>
+	</div>
 </body>
 <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>

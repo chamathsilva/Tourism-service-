@@ -4,7 +4,6 @@ require("../config/config.php");
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,18 +25,80 @@ require("../config/config.php");
     <link rel="stylesheet" href="../../assets/css/font-awesome.min.css"
 </head>
 <body>
+<div class="size-wraper">
 <?php include("top_header.php");
 include("main_menu.php");
 
-
-if(isset($_SESSION['username'])){
-    echo "you logged in as </br>", $_SESSION['username'];
-    echo "<br/><a href='../controllers/logout.php'>logout</a>";
-}else{
-    echo "<br/><a href='Login.php'>Login</a>";
-
+if(!isset($_SESSION['username'])){
+    header("Location: Login.php ");
 }
 ?>
+
+    <!--------------->
+
+    <div class="product-big-title-area " style="margin-bottom: 50px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="my-big-title ">
+                        <h2>Hello,<?php echo $_SESSION['username'];?></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="promo-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo1">
+                        <a href="RegisterHotel.php">
+                            <i class="fa fa-refresh"></i>
+                            <p>Add new hotel</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo2">
+                        <i class="fa fa-truck"></i>
+                        <p>Manage current Hotel</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo3">
+                        <a href="PromotionForm.php">
+                            <i class="fa fa-lock"></i>
+                            <p>Add new Promotion</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo4">
+                        <a href="managePromotions.php">
+                            <i class="fa fa-gift"></i>
+                            <p>Manage Promotions</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- End promo area -->
+
+
+
+
+
+
+</div>
 
 
 

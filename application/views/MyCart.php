@@ -51,7 +51,7 @@ include("main_menu.php");
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12 ">
                 <div class="product-content-right">
                     <div class="woocommerce">
                         <form method="post" action="#">
@@ -60,10 +60,11 @@ include("main_menu.php");
                                 <tr>
                                     <th class="product-remove">&nbsp;</th>
                                     <th class="product-thumbnail">&nbsp;</th>
-                                    <th class="product-name">Product</th>
-                                    <th class="product-price">Price</th>
-                                    <th class="product-quantity">Quantity</th>
-                                    <th class="product-subtotal">Total</th>
+                                    <th class="product-name">Hotel Name</th>
+                                    <th class="product-price">Check-in</th>
+                                    <th class="product-quantity">Check-out</th>
+                                    <th class="product-subtotal">Price per Day</th>
+                                    <th class="product-subtotal"> Total Price</th>
                                 </tr>
                                 </thead>
 
@@ -74,7 +75,7 @@ include("main_menu.php");
                                     </td>
 
                                     <td class="product-thumbnail">
-                                        <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/product-thumb-2.jpg"></a>
+                                        <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="../../images/pic2.jpg"></a>
                                     </td>
 
                                     <td class="product-name">
@@ -86,17 +87,18 @@ include("main_menu.php");
                                     </td>
 
                                     <td class="product-quantity">
-                                        <div class="quantity buttons_added">
-                                            <input type="button" class="minus" value="-">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
-                                            <input type="button" class="plus" value="+">
-                                        </div>
+                                        <span class="amount">£15.00</span>
+                                    </td>
+
+                                    <td class="product-subtotal">
+                                        <span class="amount">£15.00</span>
                                     </td>
 
                                     <td class="product-subtotal">
                                         <span class="amount">£15.00</span>
                                     </td>
                                 </tr>
+
 
 
                                 <tr class="cart_item">
@@ -117,11 +119,11 @@ include("main_menu.php");
                                     </td>
 
                                     <td class="product-quantity">
-                                        <div class="quantity buttons_added">
-                                            <input type="button" class="minus" value="-">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
-                                            <input type="button" class="plus" value="+">
-                                        </div>
+                                        <span class="amount">£15.00</span>
+                                    </td>
+
+                                    <td class="product-subtotal">
+                                        <span class="amount">£15.00</span>
                                     </td>
 
                                     <td class="product-subtotal">
@@ -129,12 +131,17 @@ include("main_menu.php");
                                     </td>
                                 </tr>
 
+
+
                                 <tr>
-                                    <td class="actions" colspan="6">
+                                    <td class="actions" colspan="7">
                                         <input type="submit" value="Update Cart" name="update_cart" class="button">
                                         <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
                                     </td>
                                 </tr>
+
+
+
                                 </tbody>
 
                             </table>
@@ -161,6 +168,7 @@ include("main_menu.php");
                                     <th>Order Total</th>
                                     <td><strong><span class="amount">£15.00</span></strong> </td>
                                 </tr>
+
                                 </tbody>
                             </table>
                         </div>
