@@ -28,8 +28,10 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM hotel", array() );
 		return $result_set;
 	}
+
 	//d(get_hotel_details_according_to_city("colombo"),"Test");
 	//d(get_All_hotel_details(),"Test");
+
 
 	
 	///////////////////////// Get Room Detals According to hotel_ID /////////////////////////////////////////////
@@ -38,6 +40,7 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM  hotelroom WHERE hotelID = :id ", array('id' => $hotel_id ) );
 		return $result_set;
 	}
+
 	//d(get_room_details_according_to_hotelID(1),"Test");
 
 
@@ -46,6 +49,15 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM promotion");
 		return $result_set;
 	}
+	
+	function get_userID_according_username_password($username,$password){
+		global $db;
+		$result_set = $db->query("SELECT * FROM  user WHERE userName = :uname and password= :pass ", array("uname"=> $username,"pass" =>$password) );
+		//$result_set = $result_set[0]["SELECT"];
+		return $result_set;	
+	}
+	//d(get_userID_according_username_password("TharukaD","d"),"Test");
+	//echo(get_userID_according_username_password("TharukaD","d"));
 	
 	//###########################################################################################################################################################//
 	
@@ -75,9 +87,8 @@ require("../config/config.php");
 		global $db;
 		$db->query("INSERT INTO  bookingrooms(userID,hotelID,roomID,bookingDate,checkInDate,checkOutDate) VALUES(:user_ID,:hotel_ID,:room_ID,:bookingDate,:checkInDate,:checkOutDate)",array("user_ID"=>$user_ID,"hotel_ID"=>$hotel_ID,"room_ID"=>$room_ID,"bookingDate"=>$bookingDate,"checkInDate"=>$checkInDate,"checkOutDate"=>$checkOutDate));
 
+		$db->query("DELETE FROM shopping_cart WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
 	}
-	
-
 	
 	/////////////////////////Insert Cart Details /////////////////////////////////////////////////////////////////////////////////
 	function add_to_cart($user_id,$hotel_id){
@@ -97,6 +108,7 @@ require("../config/config.php");
 	//add_hotel_details(1,"Bbayu","paka","colombo","hjd","gfjg","Hotel","fuck me");
 	//add_hotel_Rooms_details(1,1,"Lucsary",0,"gjk",12000,"hgkjhiusghsq");
 	//add_booking_details(1,1,1,"","","3/3/2014");
+
 	
 	//########################################################################################################################################################//
 	
@@ -107,20 +119,26 @@ require("../config/config.php");
 		global $db;
 		$db->query("UPDATE hotel SET hotelName = :hotelName,hotelOwnerName = :hotelOwnerName,city = :city,hotelAddress = :hotelAddress,imagePath = :imagePath,Type = :Type,Description = :Description WHERE hotelID = :hotelID  and userID=:userID" ,array("hotelID"=>$hotel_ID,"userID"=>$user_id,"hotelName"=>$hotel_name,"hotelOwnerName"=>$hotel_owner_name,"city"=>$city,"hotelAddress"=>$hotel_address,"imagePath"=>$image_path,"Type"=>$hotel_type,"Description"=>$Description));
 	}
-	//$db->query("UPDATE Persons SET firstname = :f WHERE Id = :id",array("f"=>"Johny","id"=>"1"));
-	//update_hotel_details(1,1,"jjjj","fgfg","Matara","ghgh","jkkj","HOTEL","lllllll");
+	
 	
 	//////////////////////////////////////// When user booked hotel then change status to 1 ///////////////////////////////////////////////////////////////////
 	function change_booking_room_status($hotel_ID,$room_ID){
 		global $db;
 		$db->query("UPDATE hotelroom SET status = 1 WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
 	}
+	
+	function update_Promotion($p_id,$hotel_name,$start_date,$end_date,$description){
+		global $db;
+		$result = $db->query("UPDATE promotion SET hotel_name=:hname,start_date=:s_date,end_date=:e_date,description=:des WHERE p_id=:id",array("id"=>$p_id,"hname"=>$hotel_name,"s_date"=>$start_date,"e_date"=>$end_date,"des"=>$description));
+		return $result;
+	}
 
-	change_booking_room_status(1,1);
+	update_Promotion(1,"eeeeeee","","","ffffffff");
+	//change_booking_room_status(1,1);
 
 	//change_booking_room_status(1,1);
 
-	
+
 	//########################################################################################################################################################//
 	
 	//################################################ DATA DELETE FUNTIONS #######################################################################################################//
@@ -139,6 +157,16 @@ require("../config/config.php");
 		$result_set = $result_set[0]["COUNT(*)"];
 		return $result_set;
 	}
+	
+	
+	
+	function Delete_Promotion($id){
+		global $db;
+		$db->query("DELETE FROM promotion WHERE p_id = :pid ",array("pid"=>$id));
+	}
+	
+	
+
 
 	function Delete_promotions($pro_ID){
 		global $db;
@@ -151,6 +179,7 @@ require("../config/config.php");
 	//$temp = user_login("chamath","password");
 	//echo $temp;
 	//echo $lol;
+
 	
 ?>
 

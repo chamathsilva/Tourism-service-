@@ -1,0 +1,2 @@
+Time : 15:24:05
+SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'pdb'
