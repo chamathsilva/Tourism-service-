@@ -49,7 +49,15 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM promotion");
 		return $result_set;
 	}
-
+	
+	function get_userID_according_username_password($username,$password){
+		global $db;
+		$result_set = $db->query("SELECT * FROM  user WHERE userName = :uname and password= :pass ", array("uname"=> $username,"pass" =>$password) );
+		//$result_set = $result_set[0]["SELECT"];
+		return $result_set;	
+	}
+	//d(get_userID_according_username_password("TharukaD","d"),"Test");
+	//echo(get_userID_according_username_password("TharukaD","d"));
 	
 	//###########################################################################################################################################################//
 	
@@ -80,12 +88,7 @@ require("../config/config.php");
 		$db->query("INSERT INTO  bookingrooms(userID,hotelID,roomID,bookingDate,checkInDate,checkOutDate) VALUES(:user_ID,:hotel_ID,:room_ID,:bookingDate,:checkInDate,:checkOutDate)",array("user_ID"=>$user_ID,"hotel_ID"=>$hotel_ID,"room_ID"=>$room_ID,"bookingDate"=>$bookingDate,"checkInDate"=>$checkInDate,"checkOutDate"=>$checkOutDate));
 
 		$db->query("DELETE FROM shopping_cart WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
-
-
-
 	}
-	
-
 	
 	/////////////////////////Insert Cart Details /////////////////////////////////////////////////////////////////////////////////
 	function add_to_cart($user_id,$hotel_id){
@@ -123,9 +126,15 @@ require("../config/config.php");
 		global $db;
 		$db->query("UPDATE hotelroom SET status = 1 WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
 	}
+	
+	function update_Promotion($p_id,$hotel_name,$start_date,$end_date,$description){
+		global $db;
+		$result = $db->query("UPDATE promotion SET hotel_name=:hname,start_date=:s_date,end_date=:e_date,description=:des WHERE p_id=:id",array("id"=>$p_id,"hname"=>$hotel_name,"s_date"=>$start_date,"e_date"=>$end_date,"des"=>$description));
+		return $result;
+	}
 
-
-	change_booking_room_status(1,1);
+	update_Promotion(1,"eeeeeee","","","ffffffff");
+	//change_booking_room_status(1,1);
 
 	//change_booking_room_status(1,1);
 
@@ -148,10 +157,16 @@ require("../config/config.php");
 		$result_set = $result_set[0]["COUNT(*)"];
 		return $result_set;
 	}
+	
+	
+	
+	function Delete_Promotion($id){
+		global $db;
+		$db->query("DELETE FROM promotion WHERE p_id = :pid ",array("pid"=>$id));
+	}
+	
+	
 
-	//$temp = user_login("chamath","password");
-	//echo $temp;
-	//echo $lol;
 	
 ?>
 
