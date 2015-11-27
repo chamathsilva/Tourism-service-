@@ -8,7 +8,7 @@
                         <li><a href="<?php echo base_url."application/views/userHome.php"; ?>"><i class="fa fa-user"></i> My Account</a></li>
                         <li><a href="<?php echo base_url."application/views/MyCart.php"; ?>"><i class="fa fa-user"></i> My Cart</a></li>
                         <li><a href="<?php echo base_url."application/views/checkOut.php"; ?>"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="<?php echo base_url."application/views/mainLogin.php"; ?>"<i class="fa fa-user"></i> Login</a></li>
+                        <li><a href="<?php echo base_url."application/views/Login.php"; ?>"<i class="fa fa-user"></i> Login</a></li>
                     </ul>
                 </div>
             </div>

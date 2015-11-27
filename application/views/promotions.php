@@ -31,51 +31,61 @@ require("../config/config.php");
 	?>
 
 
+	<div class="main">
+		<div class="wrap">
 
-<div class="container col-md-7 col-md-offset-2">
-	<div class="col-md-8 col-md-offset-2">	
-		<div class="panel panel-primary" style="margin-top: 10px;">
-			<div class="panel-heading">
-				<div class = "panel-title text-center" > Promotions</div>
+			<div class="content-bottom">
+				<div class="box1 promo">
+					<ul>
+
+					<div id="promotion_div"></div>
+
+					<!--
+					<div class="col_1_of_3 span_1_of_3">
+							<div class="view view-fifth">
+								<div class="top_box">
+									<div class="price">Ranlanka</div>
+									<p class="m_2">colombo</p>
+									<div class="grid_img">
+										<div class="css3"><img src="../../images/promotion.png" alt=""/></div>
+									</div>
+
+									<p class="m_2">Start Date : Rs:1480</p>
+									<p class="m_2">End Date : Rs:1480</p>
+									<p class="m_2">colombodsfndsfjkdsfkdskfbkdsbfkds</p>
+								</div>
+							</div>
+						<div class="clear"></div>
+					</div>
+					-->
+						</ul>
+
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class = "row">
-		<div class="panel panel-primary col-md-6 col-md-offset-3 text-center">
-
-			</br>
-			<form class=""  action = "" method = "POST" >
 
 
-				<div class = "form-group">
-					<label for="offername">Offer Name</label>
-					<input id="offername" type = "text" name = "offername" class="form-control" placeholder="Offer Name" />
-				</div>
 
-				<div class = "form-group">
-					<label for="valid">Valid Till</label>
-					<input id="valid" type = "text" name = "valid" class="form-control" placeholder="Valid Till" />
-				</div>
-				<div class = "form-group">
-					<label for="address">Offer Description</label>
-
-					<textarea type = "textarea" rows="5" cols="40" id="Info" name = "Info" class="form-control"  placeholder = "Offer Description" /></textarea>
-				</div>
-
-				<button type="submit" name = "publish" class="btn btn-info">Publish</button>
-				
-				</br></br>
-			</form>
-			</br>
-		</div>
-	</div>
-</div>
 	<div class="clear" style=" margin-bottom: 25%"></div>
 <?php include("footer.php") ?>
 </body>
 <script type="text/javascript" src="../../assets/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../../assets/js/tourism_service.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		//load all the results to home page when load the page.
+		$("#promotion_div").prepend('<div class="loading-indication"><img src="../../images/ajax-loader.gif" /> Loading...</div>');
+		$("#promotion_div").load("../controllers/fetch_promotions.php");
+
+
+
+
+	});
+</script>
 
 
 

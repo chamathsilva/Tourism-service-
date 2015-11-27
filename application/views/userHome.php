@@ -29,7 +29,14 @@ require("../config/config.php");
 <?php include("top_header.php");
 include("main_menu.php");
 
-echo base_url."application/views/mainLogin.php";
+
+if(isset($_SESSION['username'])){
+    echo "you logged in as </br>", $_SESSION['username'];
+    echo "<br/><a href='../controllers/logout.php'>logout</a>";
+}else{
+    echo "<br/><a href='Login.php'>Login</a>";
+
+}
 ?>
 
 

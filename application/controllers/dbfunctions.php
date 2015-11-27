@@ -20,13 +20,19 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM hotel WHERE city = :City ", array('City' => $city ) );
 		return $result_set;
 	}
+	//d(get_hotel_details_according_to_city("colombo"),"Test");
+
 	/////////////////////////Get All Hotel Details ////////////////////////////////////////////////////////////////
 	function get_All_hotel_details(){
 		global $db;
 		$result_set = $db->query("SELECT * FROM hotel", array() );
 		return $result_set;
 	}
-	
+
+	//d(get_hotel_details_according_to_city("colombo"),"Test");
+	//d(get_All_hotel_details(),"Test");
+
+
 	
 	///////////////////////// Get Room Detals According to hotel_ID /////////////////////////////////////////////
 	function get_room_details_according_to_hotelID($hotel_id){
@@ -34,6 +40,16 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM  hotelroom WHERE hotelID = :id ", array('id' => $hotel_id ) );
 		return $result_set;
 	}
+
+	//d(get_room_details_according_to_hotelID(1),"Test");
+
+
+	function get_all_promotions(){
+		global $db;
+		$result_set = $db->query("SELECT * FROM promotion");
+		return $result_set;
+	}
+
 	
 	//###########################################################################################################################################################//
 	
@@ -42,7 +58,8 @@ require("../config/config.php");
 	////////////////////////// Insert User Details to user Table When user registed ////////////////////////////////////////////////////////////////////
 	function add_registered_user_details($user_name,$first_name,$last_name,$password,$email,$NIC,$contact_no,$identity){
 		global $db;
-		$db->query("INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,identity) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)",array("UName"=>$user_name,"FName"=>$first_name,"LName"=>$last_name,"Pass"=>$password,"Email"=>$email,"NIC"=>$NIC,"CNO"=>$contact_no,"p"=>$identity));
+		$result = $db->query("INSERT INTO user(userName,firstName,lastName,password,email,NIC,contactNo,identity) VALUES(:UName,:FName,:LName,:Pass,:Email,:NIC,:CNO,:p)",array("UName"=>$user_name,"FName"=>$first_name,"LName"=>$last_name,"Pass"=>$password,"Email"=>$email,"NIC"=>$NIC,"CNO"=>$contact_no,"p"=>$identity));
+		return $result;
 	}
 	
 	////////////////////////// Insert Hotel Details to hotel Table When user Create business //////////////////////////////////////////////////////////////
@@ -61,8 +78,14 @@ require("../config/config.php");
 	function add_booking_details($user_ID,$hotel_ID,$room_ID,$bookingDate,$checkInDate,$checkOutDate){
 		global $db;
 		$db->query("INSERT INTO  bookingrooms(userID,hotelID,roomID,bookingDate,checkInDate,checkOutDate) VALUES(:user_ID,:hotel_ID,:room_ID,:bookingDate,:checkInDate,:checkOutDate)",array("user_ID"=>$user_ID,"hotel_ID"=>$hotel_ID,"room_ID"=>$room_ID,"bookingDate"=>$bookingDate,"checkInDate"=>$checkInDate,"checkOutDate"=>$checkOutDate));
+
 		$db->query("DELETE FROM shopping_cart WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
+
+
+
 	}
+	
+
 	
 	/////////////////////////Insert Cart Details /////////////////////////////////////////////////////////////////////////////////
 	function add_to_cart($user_id,$hotel_id){
@@ -72,8 +95,17 @@ require("../config/config.php");
 	///////////////////////////Insert Promotion Details //////////////////////////////////////////////////////////////////////////
 	function add_Promotion($hotel_name,$start_date,$end_date,$description){
 		global $db;
-		$db->query("INSERT INTO promotion(hotel_name,start_date,end_date,description) VALUES(:hname,:s_date,:e_date,:des)",array("hname"=>$hotel_name,"s_date"=>$start_date,"e_date"=>$end_date,"des"=>$description));
-	} 
+		$result = $db->query("INSERT INTO promotion(hotel_name,start_date,end_date,description) VALUES(:hname,:s_date,:e_date,:des)",array("hname"=>$hotel_name,"s_date"=>$start_date,"e_date"=>$end_date,"des"=>$description));
+		return $result;
+	}
+	//add_Promotion("hhhhhh",2001/1/1,2001/1/1,"gggg");
+
+	
+	//add_registered_user_details("iuioiu","yry","jtuiokjb","uuykol","uilul","lulu","99900",0);
+	//add_hotel_details(1,"Bbayu","paka","colombo","hjd","gfjg","Hotel","fuck me");
+	//add_hotel_Rooms_details(1,1,"Lucsary",0,"gjk",12000,"hgkjhiusghsq");
+	//add_booking_details(1,1,1,"","","3/3/2014");
+
 	
 	//########################################################################################################################################################//
 	
@@ -91,8 +123,13 @@ require("../config/config.php");
 		global $db;
 		$db->query("UPDATE hotelroom SET status = 1 WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
 	}
-	
-	
+
+
+	change_booking_room_status(1,1);
+
+	//change_booking_room_status(1,1);
+
+
 	//########################################################################################################################################################//
 	
 	//################################################ DATA DELETE FUNTIONS #######################################################################################################//
@@ -104,7 +141,17 @@ require("../config/config.php");
 		$db->query("DELETE FROM hotelroom WHERE hotelID = :hid ",array("hid"=>$hotel_ID));
 	}
 	//Delete_hotel_with_all_rooms(1,1);
-	
+
+	function user_login($username,$password){
+		global $db;
+		$result_set = $db->query("SELECT COUNT(*) FROM user WHERE userName = :username AND password =:pass",array("username"=>$username,"pass"=>$password));
+		$result_set = $result_set[0]["COUNT(*)"];
+		return $result_set;
+	}
+
+	//$temp = user_login("chamath","password");
+	//echo $temp;
+	//echo $lol;
 	
 ?>
 

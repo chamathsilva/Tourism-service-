@@ -40,7 +40,7 @@ include("application/views/main_menu.php");?>
 			</div>
 			<div class="col-xs-6 text-left">
 				<form style="margin-bottom: 10px; margin-top: 10px">
-					<div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a Country <span class="caret"></span></a>
+					<div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a City <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">United Statesugugughuhuuhuhu</a></li>
 							<li><a href="#">Canada</a></li>
@@ -67,15 +67,15 @@ include("application/views/main_menu.php");?>
 				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
 				     <div class="view view-fifth">
 				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
+					  	<h3 class="m_1">Ranlanka</h3>
+					  	<p class="m_2">colombo</p>
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic.jpg" alt=""/></div>
 					          <div class="mask">
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">£480</div>
+                       <div class="price">Rs:1480</div>
 					   </div>
 					    </div>
 					   
@@ -83,7 +83,8 @@ include("application/views/main_menu.php");?>
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="javascript:tempp()"  >Add To Bag </a>
+								  <a id="demo" onclick="myFunction(this, 'red')">Click me to change my text color.</a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -94,18 +95,19 @@ include("application/views/main_menu.php");?>
 					     </ul>
 			    	    <div class="clear"></div>
 			    	</a></div>
+
 				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
 				     <div class="view view-fifth">
 				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
+					  	<h3 class="m_1">Hilton</h3>
+					  	<p class="m_2">Anuradapira</p>
 					    <div class="grid_img">
 						   <div class="css3"><img src="images/pic1.jpg" alt=""/></div>
 					          <div class="mask">
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">£480</div>
+                       <div class="price">Rs:1250.00</div>
 					   </div>
 					    </div>
 					   
@@ -127,15 +129,15 @@ include("application/views/main_menu.php");?>
 				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
 				     <div class="view view-fifth">
 				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
+					  	<h3 class="m_1">OSO</h3>
+					  	<p class="m_2">Wellawattha</p>
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic2.jpg" alt=""/></div>
 					          <div class="mask">
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">£480</div>
+                       <div class="price">Rs:15000.00</div>
 					   </div>
 					    </div>
 					   
@@ -255,6 +257,22 @@ include("application/views/main_menu.php");?>
 			  </div>
 			 </div>
         </div>
+<a  onclick="tempp();" return false;">LINK</a>
+
+<a href="http://www.example.com" onclick="return tempp()">test</a>
+
+
+<a id="demo" onclick="myFunction(this, 'red')">Click me to change my text color.</a>
+
+<script>
+	function myFunction(elmnt,clr) {
+		//test11();
+		elmnt.style.color = clr;
+
+
+
+	}
+</script>
 
 
 <?php include("application/views/footer.php") ?>
@@ -266,4 +284,20 @@ include("application/views/main_menu.php");?>
 <!-- Slider -->
 <script type="text/javascript" src="assets/js/bxslider.min.js"></script>
 <script type="text/javascript" src="assets/js/script.slider.js"></script>
+
+
+<script>
+	$(document).ready(function(){
+		$(".test1").click(function(){
+			alert("The paragraph was clicked.");
+		});
+
+		function test11(){
+			alert("The paragraph was clicked.");
+
+		}
+
+
+	});
+</script>
 </html>
