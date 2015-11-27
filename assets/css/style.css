@@ -725,13 +725,7 @@ ol.slide-indicators li.active {
 input[type="text"], input[type="password"], input[type="email"], textarea {
 	border: 1px solid #ddd;
 }
-input[type="submit"], button[type=submit] {
-	background: none repeat scroll 0 0 #5a88ca;
-	border: medium none;
-	color: #fff;
-	padding: 8px 8px;
-	text-transform: uppercase;
-}
+
 input[type="submit"]:hover, button[type=submit]:hover {background-color: #222;
 	color: white;
 
@@ -7023,6 +7017,7 @@ a:hover {
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-bottom: 8px;
+	margin-left: 10px;
 }
 
 

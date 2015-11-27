@@ -49,57 +49,7 @@ include("main_menu.php");
                                     </tr>
                                     </thead>
 
-                                    <tbody>
-                                    <tr class="cart_item">
-
-                                        <td class="product-price">
-                                            <span class="amount">1</span>
-                                        </td>
-
-                                        <td class="product-name">
-                                            <a href="single-product.html">Ship Your Idea</a>
-                                        </td>
-
-                                        <td class="product-price">
-                                            <span class="amount">£15.00</span>
-                                        </td>
-
-                                        <td class="product-quantity">
-                                            <span class="amount">
-                                                <button type="button" class="btn btn-success buttonmargin">Update</button>
-                                                <button type="button" class="btn btn-danger buttonmargin">Delete</button>
-                                            </span>
-                                        </td>
-
-                                    </tr>
-
-
-
-                                    <tr class="cart_item">
-
-                                        <td class="product-price">
-                                            <span class="amount">2</span>
-                                        </td>
-
-
-                                        <td class="product-name">
-                                            <a href="single-product.html">Ship Your Idea</a>
-                                        </td>
-
-                                        <td class="product-price">
-                                            <span class="amount">£15.00</span>
-                                        </td>
-
-                                        <td class="product-quantity">
-                                            <span class="amount">
-                                                <button type="button" class="btn btn-success buttonmargin">Update</button>
-                                                <button type="button" class="btn btn-danger buttonmargin">Delete</button>
-                                            </span>
-                                        </td>
-
-
-                                    </tr>
-
+                                    <tbody id = "manage_promotion" >
                                     </tbody>
                                 </table>
 
@@ -107,31 +57,6 @@ include("main_menu.php");
                     </div>
                 </div>
 
-
-
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Launch demo modal
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -146,6 +71,18 @@ include("main_menu.php");
 <script type="text/javascript" src="../../assets/js/promotion.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="../../assets/js/validation.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        //load all the results to home page when load the page.
+        $("#manage_promotion").prepend('<div class="loading-indication"><img src="../../images/ajax-loader.gif" /> Loading...</div>');
+        $("#manage_promotion").load("../controllers/fetch_manage_promotions.php");
+
+
+
+
+    });
+</script>
 
 
 
