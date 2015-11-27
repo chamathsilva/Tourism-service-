@@ -27,6 +27,7 @@ require("../config/config.php");
 </head>
 
 <body>
+<div class="size-wraper">
 <?php include("top_header.php");
 include("main_menu.php");
 ?>
@@ -246,8 +247,9 @@ include("main_menu.php");
 
 
 
-
+</div>
 <?php include("footer.php") ?>
+
 </body>
 <script type="text/javascript" src="../../assets/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>

@@ -15,9 +15,21 @@
                     <li class="#active"><a href="<?php echo base_url;?>">Home</a></li>
                     <li><a href="<?php echo base_url."application/views/rooms.php";?>">Rooms</a></li>
                     <li><a href="<?php echo base_url."application/views/promotions.php";?>">Promotions</a></li>
-                    <li><a href="<?php echo base_url."test/multi/index.html";?>">Contact</a></li>
-
+                    <li><a href="<?php echo base_url."application/views/ContactUs.php";?>">Contact</a></li>
                 </ul>
+
+                <?php
+                if(isset($_SESSION['username'])){
+                    ?>
+                        <ul class="nav navbar-nav" style="float:right">
+                            <li><a href="<?php echo base_url."application/views/userHome.php"; ?>">HI, <?php echo $_SESSION["username"];?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i></a></li>
+                        </ul>
+                    <?php
+                }
+                ?>
+
+
+
             </div>
         </div>
     </div>
