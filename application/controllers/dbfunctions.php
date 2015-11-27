@@ -140,6 +140,14 @@ require("../config/config.php");
 		return $result_set;
 	}
 
+	function Delete_promotions($pro_ID){
+		global $db;
+		$db->query("DELETE FROM promotion WHERE p_id = :hid ",array("hid"=>$pro_ID));
+	}
+
+
+
+
 	//$temp = user_login("chamath","password");
 	//echo $temp;
 	//echo $lol;

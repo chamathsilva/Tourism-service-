@@ -45,7 +45,8 @@ include("main_menu.php");
                                         <th class="product-name">Id</th>
                                         <th class="product-name">Promotion Name</th>
                                         <th class="product-price">Valid till</th>
-                                        <th class="product-quantity">Manage</th>
+                                        <th class="product-quantity">Update</th>
+                                        <th class="product-quantity">Delete</th>
                                     </tr>
                                     </thead>
 
@@ -60,6 +61,8 @@ include("main_menu.php");
             </div>
         </div>
     </div>
+
+
 
 <div class="clear""></div>
 </div>
@@ -82,6 +85,16 @@ include("main_menu.php");
 
 
     });
+</script>
+
+<script>
+    function myFunction(x) {
+        var txt;
+        var r = confirm("Are you sure!");
+        if (r == true) {
+            window.location.href = "../controllers/Delete_promotion.php?id=".concat(x);
+        }
+    }
 </script>
 
 
