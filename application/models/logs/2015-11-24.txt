@@ -1,0 +1,19 @@
+Time : 16:44:37
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_date' in 'field list'
+Raw SQL : INSERT INTO promotion(hotel_name,start_date,end_date,description) VALUES(:hname,:s_date,e_date,des)
+
+Time : 11:31:04
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cart(hotel_id,room_id) VALUES(?,?)' at line 1
+Raw SQL : INSERT INTO shopping cart(hotel_id,room_id) VALUES(:hid,:rid)
+
+Time : 11:00:19
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`pdb`.`hotelroom`, CONSTRAINT `ForeignKeyForHotel` FOREIGN KEY (`hotelID`) REFERENCES `hotel` (`hotelID`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : DELETE FROM hotel WHERE userID=:uid and hotelID = :hid
+
+Time : 10:58:25
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE userID=? and hotelID = ?' at line 1
+Raw SQL : DELETE hotel WHERE userID=:uid and hotelID = :hid
+
+Time : 10:56:53
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE userID=?,hotelID = ?' at line 1
+Raw SQL : DELETE hotel WHERE userID=:uid,hotelID = :hid

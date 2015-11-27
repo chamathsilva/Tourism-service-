@@ -26,8 +26,7 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM hotel", array() );
 		return $result_set;
 	}
-	//d(get_hotel_details_according_to_city("colombo"),"Test");
-	d(get_All_hotel_details(),"Test");
+	
 	
 	///////////////////////// Get Room Detals According to hotel_ID /////////////////////////////////////////////
 	function get_room_details_according_to_hotelID($hotel_id){
@@ -35,7 +34,6 @@ require("../config/config.php");
 		$result_set = $db->query("SELECT * FROM  hotelroom WHERE hotelID = :id ", array('id' => $hotel_id ) );
 		return $result_set;
 	}
-	//d(get_room_details_according_to_hotelID(1),"Test");
 	
 	//###########################################################################################################################################################//
 	
@@ -63,7 +61,7 @@ require("../config/config.php");
 	function add_booking_details($user_ID,$hotel_ID,$room_ID,$bookingDate,$checkInDate,$checkOutDate){
 		global $db;
 		$db->query("INSERT INTO  bookingrooms(userID,hotelID,roomID,bookingDate,checkInDate,checkOutDate) VALUES(:user_ID,:hotel_ID,:room_ID,:bookingDate,:checkInDate,:checkOutDate)",array("user_ID"=>$user_ID,"hotel_ID"=>$hotel_ID,"room_ID"=>$room_ID,"bookingDate"=>$bookingDate,"checkInDate"=>$checkInDate,"checkOutDate"=>$checkOutDate));
-		$db->query("DELETE FROM hotelroom WHERE hotelID = :hid ",array("hid"=>$hotel_ID));
+		$db->query("DELETE FROM shopping_cart WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
 	}
 	
 	/////////////////////////Insert Cart Details /////////////////////////////////////////////////////////////////////////////////
@@ -76,12 +74,6 @@ require("../config/config.php");
 		global $db;
 		$db->query("INSERT INTO promotion(hotel_name,start_date,end_date,description) VALUES(:hname,:s_date,:e_date,:des)",array("hname"=>$hotel_name,"s_date"=>$start_date,"e_date"=>$end_date,"des"=>$description));
 	} 
-	//add_Promotion("hhhhhh",2001/1/1,2001/1/1,"gggg");
-	
-	//add_registered_user_details("iuioiu","yry","jtuiokjb","uuykol","uilul","lulu","99900",0);
-	//add_hotel_details(1,"Bbayu","paka","colombo","hjd","gfjg","Hotel","fuck me");
-	//add_hotel_Rooms_details(1,1,"Lucsary",0,"gjk",12000,"hgkjhiusghsq");
-	//add_booking_details(1,1,1,"","","3/3/2014");
 	
 	//########################################################################################################################################################//
 	
@@ -92,15 +84,14 @@ require("../config/config.php");
 		global $db;
 		$db->query("UPDATE hotel SET hotelName = :hotelName,hotelOwnerName = :hotelOwnerName,city = :city,hotelAddress = :hotelAddress,imagePath = :imagePath,Type = :Type,Description = :Description WHERE hotelID = :hotelID  and userID=:userID" ,array("hotelID"=>$hotel_ID,"userID"=>$user_id,"hotelName"=>$hotel_name,"hotelOwnerName"=>$hotel_owner_name,"city"=>$city,"hotelAddress"=>$hotel_address,"imagePath"=>$image_path,"Type"=>$hotel_type,"Description"=>$Description));
 	}
-	//$db->query("UPDATE Persons SET firstname = :f WHERE Id = :id",array("f"=>"Johny","id"=>"1"));
-	//update_hotel_details(1,1,"jjjj","fgfg","Matara","ghgh","jkkj","HOTEL","lllllll");
+	
 	
 	//////////////////////////////////////// When user booked hotel then change status to 1 ///////////////////////////////////////////////////////////////////
 	function change_booking_room_status($hotel_ID,$room_ID){
 		global $db;
 		$db->query("UPDATE hotelroom SET status = 1 WHERE hotelID = :hid and roomID=:rid",array("hid"=>$hotel_ID,"rid"=>$room_ID));
 	}
-	//change_booking_room_status(1,1);
+	
 	
 	//########################################################################################################################################################//
 	
