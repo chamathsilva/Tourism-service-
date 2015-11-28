@@ -76,8 +76,9 @@ $address=$_POST['address'];
 $Info=$_POST['Info'];
 $hotelType=$_POST['hotelType'];
 $noOfRooms=$_POST['noOfRooms'];
+$image_path=$_POST['imagename'];
 
-
+/*
 echo $hotalName;
 echo $OwnerName;
 echo $city;
@@ -85,10 +86,17 @@ echo $address;
 echo $Info;
 echo $hotelType;
 echo $noOfRooms;
+*/
 
 
-$user_id=1;
-$image_path="dfg";
+$db = new Db();
+
+$username=$_SESSION['username'];
+$result_set_user = $db->query("SELECT * FROM  user WHERE userName = :userName ", array('userName' => $_SESSION['username'] ));
+								
+$user_id=$result_set_user[0]['userID'];
+echo $image_path;
+
 
 add_hotel_details($user_id,$hotalName,$OwnerName,$city,$address,$image_path,$hotelType,$Info);
 
