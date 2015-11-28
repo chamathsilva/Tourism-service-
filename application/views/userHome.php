@@ -79,12 +79,49 @@ if(!isset($_SESSION['username'])){
                         </a>
                     </div>
                 </div>
-
+			
                 <div class="col-md-3 col-sm-3">
                     <div class="single-promo promo4">
                         <a href="managePromotions.php">
                             <i class="fa fa-gift"></i>
                             <p>Manage Promotions</p>
+                        </a>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo1">
+                        <a href="AddPaymentDeails.php">
+                            <i class="fa fa-refresh"></i>
+                            <p>Add Payment Details</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo2">
+                        <i class="fa fa-truck"></i>
+                        <p>Manage Payment Details</p>
+                    </div>
+                </div>
+			
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo3">
+                        <a href="PromotionForm.php">
+                            <i class="fa fa-lock"></i>
+                            <p>Add Rooms</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="single-promo promo4">
+                        <a href="managePromotions.php">
+                            <i class="fa fa-gift"></i>
+                            <p>Manage Rooms</p>
                         </a>
                     </div>
                 </div>
