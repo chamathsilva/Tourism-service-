@@ -123,33 +123,35 @@ if(!isset($_SESSION['username'])){
                     </div>
                 </div>
 
->>>>>>> 73465906e5496d80018cbb15b3a9ed06d5cb8874
+
                 <div class="col-md-3 col-sm-3">
                     <div class="single-promo promo3">
                         <a href="PromotionForm.php">
                             <i class="fa fa-lock"></i>
-<<<<<<< HEAD
-                            <p>Add Rooms</p>
-=======
-                            <p>Add new Promotion</p>
->>>>>>> 73465906e5496d80018cbb15b3a9ed06d5cb8874
+
+                         
+
+                           <p>Add new Promotion</p>
+
                         </a>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3">
-<<<<<<< HEAD
+
                     <div class="single-promo promo4">
-                        <a href="managePromotions.php">
+                        <a href="selecthotel.php">
                             <i class="fa fa-gift"></i>
-                            <p>Manage Rooms</p>
+                            <p>Add Rooms</p>
                         </a>
                     </div>
                 </div>
-=======
+
                     <div class="single-promo promo2">
+					 <a href="selecthotelEdit.php">
                         <i class="fa fa-truck"></i>
-                        <p>Manage current Hotel</p>
+                        <p>Update room Details</p>
+					  </a>
                     </div>
                 </div>
 
@@ -162,7 +164,7 @@ if(!isset($_SESSION['username'])){
                     </div>
                 </div>
 
->>>>>>> 73465906e5496d80018cbb15b3a9ed06d5cb8874
+
 
             </div>
         </div>
