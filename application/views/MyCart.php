@@ -68,34 +68,62 @@ include("main_menu.php");
                                 </thead>
 
                                 <tbody>
-                                <tr class="cart_item">
-                                    <td class="product-remove">
-                                        <a title="Remove this item" class="remove" href="#">×</a>
+								
+								<?php
+								
+								$db = new Db();
+								$result_set_user = $db->query("SELECT * FROM  user WHERE userName = :userName ", array('userName' => $_SESSION['username'] ));
+								
+								$userID=$result_set_user[0]['userID'];
+							
+								$total_price=0;
+								$result_set = $db->query("SELECT * FROM  shopping_cart WHERE userID = :userID ", array('userID' => $userID ));
+								
+								
+								
+								
+								foreach($result_set as $x)
+								{
+								
+								$result_set_hotel = $db->query("SELECT * FROM  hotel WHERE hotelID = :hotelid ", array('hotelid' => $x['hotel_id'] ));
+								
+								$total_price=$total_price+ $x['price'];
+								echo "
+                                <tr class='cart_item'>
+                                    <td class='product-remove'>
+                                        <a title='Remove this item' class='remove' href='#'>×</a>
                                     </td>
 
-                                    <td class="product-thumbnail">
-                                        <a href="single-product.html"><img width="145" height="140" alt="poster_1_up" class="shop_thumbnail" src="../../images/pic2.jpg"></a>
+                                    <td class='product-thumbnail'>
+                                        <a href='single-product.html'><img width='145' height='140' alt='poster_1_up' class='shop_thumbnail' src='temp/".$result_set_hotel[0]['imagePath']."   '></a>
+										
+										
+                                    </td>
+									
+								
+
+                                    <td class='product-name'>
+                                        <a href='single-product.html'>".$result_set_hotel[0]['hotelName']."</a>
                                     </td>
 
-                                    <td class="product-name">
-                                        <a href="single-product.html">Hotel Name</a>
+                                    <td class='product-price'>
+                                        <span class='amount'>Rs.".$x['price']."</span>
                                     </td>
 
-                                    <td class="product-price">
-                                        <span class="amount">£15.00</span>
+                                    <td class='product-quantity'>
+                                        <span class='amount'>".$x['room_id']."</span>
                                     </td>
 
-                                    <td class="product-quantity">
-                                        <span class="amount">4</span>
-                                    </td>
-
-                                    <td class="product-subtotal">
-                                        <span class="amount">£15.00</span>
+                                    <td class='product-subtotal'>
+                                        <span class='amount'>Rs.".$x['price']."</span>
                                     </td>
 
                                    
-                                </tr>
-
+                                </tr>";
+							
+								}
+								
+								?>
 
                                 <tr>
                                     <td class="actions" colspan="6">
@@ -115,17 +143,24 @@ include("main_menu.php");
 
                         <div class="cart_totals ">
                             <h2>Cart Totals</h2>
-
+							
                             <table cellspacing="0">
                                 <tbody>
                                 <tr class="cart-subtotal">
-                                    <th>Cart Subtotal</th>
-                                    <td><span class="amount">£15.00</span></td>
+                                    <th>Cart Subtotal Rs.</th>
+                                    <td><span class="amount">
+									
+									<?php echo $total_price; ?>
+									
+									</span></td>
                                 </tr>
 
                                 <tr class="order-total">
-                                    <th>Order Total</th>
-                                    <td><strong><span class="amount">£15.00</span></strong> </td>
+                                    <th>Order Total Rs.</th>
+                                    <td><strong><span class="amount">
+									
+									<?php echo $total_price; ?>
+									</span></strong> </td>
                                 </tr>
 
                                 </tbody>
