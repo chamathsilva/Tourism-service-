@@ -167,6 +167,19 @@ require("../config/config.php");
 	
 	
 
+
+	function Delete_promotions($pro_ID){
+		global $db;
+		$db->query("DELETE FROM promotion WHERE p_id = :hid ",array("hid"=>$pro_ID));
+	}
+
+
+
+
+	//$temp = user_login("chamath","password");
+	//echo $temp;
+	//echo $lol;
+
 	
 ?>
 
